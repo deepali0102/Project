@@ -14,7 +14,7 @@
 <body>
     <center>
         <h1><center> Login Here </center></h1>
-            <form action="login" method="post">
+            <form action="LoginProcess.jsp" method="post">
 		<table style="with: 50%">
  
 			<tr>
