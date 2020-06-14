@@ -4,14 +4,29 @@
     Author     : user
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title> Login Form </title>
+</head>
+<body>
+    <center>
+        <h1><center> Login Here </center></h1>
+            <form action="login" method="post">
+		<table style="with: 50%">
+ 
+			<tr>
+				<td>UserName</td>
+				<td><input type="text" name="username" /></td>
+			</tr>
+				<tr>
+				<td>Password</td>
+				<td><input type="password" name="password" /></td>
+			</tr>
+		</table>
+		<input type="submit" value="Login" /></form>
+    </center>
+</body>
 </html>
