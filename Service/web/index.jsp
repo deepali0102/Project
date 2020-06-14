@@ -13,20 +13,17 @@
 </head>
 <body>
     <center>
-        <h1><center> Login Here </center></h1>
-            <form action="LoginProcess.jsp" method="post">
+        <h1><center> Enter Name Here </center></h1>
+            <form action="next.jsp" method="post">
 		<table style="with: 50%">
  
 			<tr>
 				<td>UserName</td>
 				<td><input type="text" name="username" /></td>
 			</tr>
-				<tr>
-				<td>Password</td>
-				<td><input type="password" name="password" /></td>
-			</tr>
+				
 		</table>
-		<input type="submit" value="Login" /></form>
+		<input type="submit" value="Submit" /></form>
     </center>
 </body>
 </html>

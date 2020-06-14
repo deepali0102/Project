@@ -12,19 +12,12 @@
         <title>JSP Page</title>
     </head>
     <body>
-    <% String name = request.getParameter("username");
-         String password = request.getParameter("password");
-        if (name.equals("Deepali") && password.equals("Deepali"))
-         {
-    %>
-        <p>Your Input is correct!</p>
-    <%   }
-        else
-         {
-
-response.sendRedirect("index.jsp");
-    }
-    %>
+        <%
+            String name=(String)pageContext.getAttribute("user",PageContext.SESSION_SCOPE);  
+            out.print("Hello "+name);   
+        %>
+            <% String age = request.getParameter("age"); %>
+            <a>Your age is   <% out.println(age); %>
 
     </body>
 </html>
