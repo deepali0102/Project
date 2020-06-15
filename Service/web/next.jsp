@@ -5,6 +5,13 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page language="java"%>
+<%!
+    String name;
+%>
+<%
+    name=(String)session.getAttribute("user");
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,11 +20,7 @@
     </head>
     <body>
         <center>
-            <%   
-                String name=(String)session.getAttribute("user");  
-                out.print("Welcome "+name); 
-            %>
-         
+            <%=name%>
             <form action="forget.jsp" method="post">
                 <table style="with: 50%">
                     <input type="submit" value="Logout" />
