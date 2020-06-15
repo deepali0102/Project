@@ -6,16 +6,16 @@
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%
+if( session.getAttribute("user")== null)
+{
+%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title> Login Form </title>
 </head>
 <body>
-    <%
-    if( session.getAttribute("user")== null)
-    {
-    %>
     <center>
         <h1><center> Login Here </center></h1>
             <form action="LoginProcess.jsp" method="post">
@@ -34,13 +34,12 @@
 		</table>
 		<input type="submit" value="Login" /></form>
     </center>
-    <%
-    }
-    else
-    {
-        response.sendRedirect("next.jsp"); 
-
-    }
-    %>
 </body>
 </html>
+<%
+}
+else
+{
+    response.sendRedirect("next.jsp"); 
+}
+%>
