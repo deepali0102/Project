@@ -1,6 +1,6 @@
 <%-- 
     Document   : next
-    Created on : 15 Jun, 2020, 12:03:12 AM
+    Created on : 15 Jun, 2020, 3:22:35 PM
     Author     : user
 --%>
 
@@ -14,21 +14,16 @@
     <body>
         <center>
             <%   
-                String name=request.getParameter("username");  
-                    out.print("Welcome "+name);  
-  
-                pageContext.setAttribute("user",name,PageContext.SESSION_SCOPE);   %>
-        <h1><center> Enter Age Here </center></h1>
-            <form action="LoginProcess.jsp" method="post">
-		<table style="with: 50%">
- 
-			<tr>
-				<td>Enter Your Age</td>
-				<td><input type="number" name="age" /></td>
-			</tr>
-				
-		</table>
-		<input type="submit" value="Submit" /></form>
-    </center>
+                String name=(String)session.getAttribute("user");  
+                out.print("Welcome "+name); 
+            %>
+         
+            <form action="forget.jsp" method="post">
+                <table style="with: 50%">
+                    <input type="submit" value="Logout" />
+                </table>
+            </form>
+        
+        </center>
     </body>
 </html>
