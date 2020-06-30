@@ -19,7 +19,7 @@
     size1=Integer.parseInt(request.getParameter("size1"));
     size2=Integer.parseInt(request.getParameter("size2"));
     Class.forName("oracle.jdbc.driver.OracleDriver");
-    Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","navneet");
+    Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","deepali");
     q="CREATE TABLE "+tablename+"("+field1+" "+datatype1+"("+size1+"),"+field2+" "+datatype2+"("+size2+"))";
     PreparedStatement ps=con.prepareStatement(q);
     ps.executeUpdate();

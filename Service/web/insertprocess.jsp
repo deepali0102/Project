@@ -14,7 +14,7 @@
     id=Integer.parseInt(request.getParameter("id"));
     name=request.getParameter("name");
     Class.forName("oracle.jdbc.driver.OracleDriver");
-    Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","navneet");
+    Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","deepali");
     PreparedStatement ps=con.prepareStatement("INSERT INTO navneet VALUES(?,?)");
     ps.setInt(1, id);
     ps.setString(2, name);
